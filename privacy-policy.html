@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Privacy Policy for Sleep Calculator Online. Learn how we collect, use, and protect your data. GDPR and CCPA compliant.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0118">
+    <title>Privacy Policy - Sleep Calculator Online</title>
+    <link rel="canonical" href="https://sleepcalculatoronline.com/privacy-policy">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--bg:#0a0118;--surf:#110922;--surf2:#1a1035;--accent:#8b5cf6;--accent2:#a78bfa;--accent3:#c4b5fd;--mint:#34d399;--amber:#fbbf24;--rose:#fb7185;--sky:#38bdf8;--t1:#f1f0f7;--t2:#b8b0cd;--t3:#7e7494;--bd:rgba(139,92,246,.12);--bd2:rgba(255,255,255,.06);--gr:linear-gradient(135deg,#8b5cf6,#06b6d4);--card-r:20px}
+        html{scroll-behavior:smooth}
+        body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--t1);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+        .bg-wrap{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;overflow:hidden;pointer-events:none}
+        .bg-orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:.07;animation:of 25s ease-in-out infinite alternate}
+        .bg-orb:nth-child(1){width:600px;height:600px;background:#8b5cf6;top:-10%;left:-10%;animation-duration:30s}
+        .bg-orb:nth-child(2){width:500px;height:500px;background:#06b6d4;bottom:-15%;right:-10%;animation-delay:5s;animation-duration:28s}
+        .bg-orb:nth-child(3){width:400px;height:400px;background:#ec4899;top:40%;left:50%;animation-delay:10s;animation-duration:22s}
+        @keyframes of{0%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-20px) scale(1.1)}100%{transform:translate(-30px,30px) scale(.95)}}
+        .bg-grid{position:absolute;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(rgba(139,92,246,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 40%,black 20%,transparent 70%)}
+        .bg-noise{position:absolute;top:0;left:0;width:100%;height:100%;opacity:.015;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+        nav{position:fixed;top:0;width:100%;z-index:1000;padding:14px 0;backdrop-filter:blur(24px) saturate(1.5);-webkit-backdrop-filter:blur(24px) saturate(1.5);background:rgba(10,1,24,.7);border-bottom:1px solid var(--bd);transition:all .35s}
+        nav.sc{padding:8px 0;background:rgba(10,1,24,.9);box-shadow:0 4px 30px rgba(0,0,0,.5)}
+        .nv{max-width:1140px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+        .logo{font-size:1.15rem;font-weight:700;color:var(--t1);display:flex;align-items:center;gap:10px;text-decoration:none;letter-spacing:-.02em}
+        .logo-mark{width:32px;height:32px;background:var(--gr);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 4px 15px rgba(139,92,246,.3)}
+        .nl{display:flex;gap:8px;list-style:none}
+        .nl a{color:var(--t2);text-decoration:none;font-weight:500;font-size:.82rem;padding:6px 14px;border-radius:8px;transition:all .25s}
+        .nl a:hover{color:var(--t1);background:rgba(139,92,246,.08)}
+        .hm{display:none;flex-direction:column;cursor:pointer;gap:5px;padding:8px;border-radius:8px}
+        .hm span{width:18px;height:1.5px;background:var(--t2);transition:all .3s;border-radius:2px}
+
+        .page-header{padding:120px 20px 50px;text-align:center;max-width:800px;margin:0 auto}
+        .page-header .badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:50px;background:rgba(139,92,246,.1);border:1px solid var(--bd);font-size:.72rem;font-weight:600;color:var(--accent2);margin-bottom:16px;letter-spacing:.04em;text-transform:uppercase}
+        .page-header .badge i{width:6px;height:6px;border-radius:50%;background:var(--mint);animation:pd 2s infinite}
+        @keyframes pd{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}
+        .page-header h1{font-size:2.4rem;font-weight:800;letter-spacing:-.03em;margin-bottom:12px;line-height:1.15}
+        .page-header h1 em{font-style:normal;background:var(--gr);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .page-header p{color:var(--t2);font-size:1rem;line-height:1.7}
+        .page-header .updated{color:var(--t3);font-size:.8rem;margin-top:12px}
+
+        .content{max-width:800px;margin:0 auto;padding:0 20px 80px}
+        .content-card{background:var(--surf);border:1px solid var(--bd2);border-radius:var(--card-r);padding:40px 36px;position:relative;overflow:hidden}
+        .content-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+        .content-card h2{font-size:1.25rem;font-weight:700;margin:32px 0 12px;letter-spacing:-.02em;color:var(--t1);padding-bottom:8px;border-bottom:1px solid var(--bd2)}
+        .content-card h2:first-child{margin-top:0}
+        .content-card p{color:var(--t2);font-size:.9rem;line-height:1.75;margin-bottom:14px}
+        .content-card ul{padding-left:20px;margin-bottom:16px}
+        .content-card li{color:var(--t2);font-size:.88rem;line-height:1.7;margin-bottom:8px}
+        .content-card li strong{color:var(--t1);font-weight:600}
+        .content-card a{color:var(--accent2);text-decoration:none;transition:color .2s}
+        .content-card a:hover{color:var(--accent3)}
+        .highlight-box{background:rgba(139,92,246,.05);border:1px solid var(--bd);border-radius:12px;padding:16px 20px;margin:16px 0;font-size:.88rem;color:var(--t2);line-height:1.65}
+        .highlight-box strong{color:var(--accent2)}
+
+        footer{padding:45px 20px 22px;background:var(--surf);border-top:1px solid var(--bd2)}
+        .fc{max-width:1140px;margin:0 auto}
+        .fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;margin-bottom:32px}
+        .fcl h4{font-size:.92rem;font-weight:700;margin-bottom:16px}
+        .fcl p{color:var(--t2);font-size:.8rem;line-height:1.6}
+        .fcl ul{list-style:none}
+        .fcl ul li{margin-bottom:8px}
+        .fcl ul li a{color:var(--t3);text-decoration:none;font-size:.8rem;transition:all .25s;font-weight:500}
+        .fcl ul li a:hover{color:var(--accent2);padding-left:4px}
+        .fb{text-align:center;padding-top:24px;border-top:1px solid var(--bd2);color:var(--t3);font-size:.72rem;line-height:1.6}
+
+        .sctop{position:fixed;bottom:24px;right:24px;width:40px;height:40px;border-radius:12px;background:var(--surf);border:1px solid var(--bd);cursor:pointer;display:none;align-items:center;justify-content:center;font-size:.9rem;z-index:999;transition:all .3s;color:var(--t2)}
+        .sctop.show{display:flex}
+        .sctop:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
+
+        @media(max-width:768px){.hm{display:flex}.nl{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(10,1,24,.97);flex-direction:column;padding:16px;gap:4px;border-bottom:1px solid var(--bd);backdrop-filter:blur(20px)}.nl.open{display:flex}.nl a{padding:10px 16px;border-radius:10px}.page-header h1{font-size:1.7rem}.content-card{padding:28px 22px}}
+        @media(max-width:420px){.page-header h1{font-size:1.4rem}.content-card{padding:22px 16px}}
+    </style>
+</head>
+<body>
+
+<div class="bg-wrap"><div class="bg-orb"></div><div class="bg-orb"></div><div class="bg-orb"></div><div class="bg-grid"></div><div class="bg-noise"></div></div>
+
+<nav id="nav">
+    <div class="nv">
+        <a href="/" class="logo"><div class="logo-mark">🌙</div>Sleep Calculator Online</a>
+        <ul class="nl" id="navL">
+            <li><a href="/">Calculator</a></li>
+            <li><a href="/#stages">Sleep Stages</a></li>
+            <li><a href="/#tips">Tips</a></li>
+            <li><a href="/#naps">Nap Guide</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+        </ul>
+        <div class="hm" onclick="document.getElementById('navL').classList.toggle('open')"><span></span><span></span><span></span></div>
+    </div>
+</nav>
+
+<div class="page-header">
+    <div class="badge"><i></i>Legal Document</div>
+    <h1><em>Privacy</em> Policy</h1>
+    <p>We value your privacy and are committed to protecting your personal information. This policy explains how we collect, use, and safeguard your data.</p>
+    <div class="updated">Last Updated: <script>document.write(new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}))</script></div>
+</div>
+
+<div class="content">
+    <div class="content-card">
+
+        <h2>1. Introduction</h2>
+        <p>Welcome to Sleep Calculator Online ("we," "our," or "us"). We operate the website <strong>sleepcalculatoronline.com</strong> (the "Service"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this policy carefully. By using the Service, you consent to the practices described in this policy.</p>
+
+        <h2>2. Information We Collect</h2>
+        <p>We may collect the following types of information:</p>
+
+        <h3 style="font-size:1.05rem;font-weight:700;margin:20px 0 8px;color:var(--accent2)">2.1 Automatically Collected Data</h3>
+        <ul>
+            <li><strong>Log Data:</strong> Your IP address, browser type and version, operating system, referring/exit pages, date/time stamps, clickstream data, and pages viewed.</li>
+            <li><strong>Device Information:</strong> Hardware model, operating system version, unique device identifiers, and mobile network information.</li>
+            <li><strong>Usage Data:</strong> How you interact with our Service, including features used, time spent on pages, and navigation patterns.</li>
+        </ul>
+
+        <h3 style="font-size:1.05rem;font-weight:700;margin:20px 0 8px;color:var(--accent2)">2.2 Cookies and Tracking Technologies</h3>
+        <ul>
+            <li><strong>Essential Cookies:</strong> Required for basic website functionality and cannot be disabled.</li>
+            <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website using services like Google Analytics.</li>
+            <li><strong>Advertising Cookies:</strong> Used by Google AdSense and other partners to serve personalized advertisements based on your browsing history.</li>
+            <li><strong>Preference Cookies:</strong> Remember your settings, language preferences, and personalization choices.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <strong>🍪 Cookie Control:</strong> You can manage cookie preferences through your browser settings. Most browsers allow you to refuse cookies, delete existing cookies, or alert you before a cookie is placed. Note that disabling cookies may affect website functionality.
+        </div>
+
+        <h3 style="font-size:1.05rem;font-weight:700;margin:20px 0 8px;color:var(--accent2)">2.3 Information from Third Parties</h3>
+        <ul>
+            <li><strong>Google AdSense:</strong> Google may collect data through cookies and web beacons to serve ads based on your prior visits. You can opt out of personalized advertising at <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.</li>
+            <li><strong>Google Analytics:</strong> Collects anonymized data about website traffic, user behavior, and demographic information.</li>
+        </ul>
+
+        <h2>3. How We Use Your Information</h2>
+        <p>We use collected information for the following purposes:</p>
+        <ul>
+            <li>To operate, maintain, and improve our website and services</li>
+            <li>To understand and analyze usage trends, preferences, and user behavior</li>
+            <li>To display relevant advertisements through Google AdSense</li>
+            <li>To monitor website performance, uptime, and security</li>
+            <li>To detect, prevent, and address technical issues and fraud</li>
+            <li>To comply with legal obligations and enforce our terms</li>
+            <li>To communicate with you about updates, if you have opted in</li>
+        </ul>
+
+        <h2>4. Data Sharing and Disclosure</h2>
+        <p>We do <strong>not</strong> sell, trade, or rent your personal information to third parties. We may share data with:</p>
+        <ul>
+            <li><strong>Google AdSense & Analytics:</strong> For advertising and analytics purposes, subject to Google's privacy policies.</li>
+            <li><strong>Service Providers:</strong> Trusted third parties who assist in operating our website, hosting services, and analytics, bound by confidentiality agreements.</li>
+            <li><strong>Law Enforcement:</strong> When required by law, subpoena, court order, or governmental regulation.</li>
+            <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets, your data may be transferred.</li>
+        </ul>
+
+        <h2>5. Data Security</h2>
+        <p>We implement industry-standard security measures to protect your information, including:</p>
+        <ul>
+            <li>SSL/TLS encryption for all data transmission</li>
+            <li>Regular security assessments and vulnerability scans</li>
+            <li>Access controls and authentication procedures</li>
+            <li>Secure hosting infrastructure with reputable providers</li>
+        </ul>
+        <p>However, no method of electronic transmission or storage is 100% secure. We cannot guarantee absolute security of your data.</p>
+
+        <h2>6. Your Rights and Choices</h2>
+        <p>Depending on your jurisdiction, you may have the following rights:</p>
+        <ul>
+            <li><strong>Right to Access:</strong> Request a copy of the personal data we hold about you.</li>
+            <li><strong>Right to Rectification:</strong> Request correction of inaccurate personal data.</li>
+            <li><strong>Right to Erasure:</strong> Request deletion of your personal data ("Right to be Forgotten").</li>
+            <li><strong>Right to Restrict Processing:</strong> Request limitation of how we process your data.</li>
+            <li><strong>Right to Data Portability:</strong> Receive your data in a structured, machine-readable format.</li>
+            <li><strong>Right to Object:</strong> Object to processing of your data for certain purposes.</li>
+            <li><strong>Right to Withdraw Consent:</strong> Withdraw previously given consent at any time.</li>
+        </ul>
+
+        <h2>7. GDPR Compliance (European Users)</h2>
+        <p>If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, we process your personal data in compliance with the General Data Protection Regulation (GDPR). Our lawful bases for processing include:</p>
+        <ul>
+            <li><strong>Legitimate Interest:</strong> Operating and improving our website</li>
+            <li><strong>Consent:</strong> For advertising cookies and personalized ads</li>
+            <li><strong>Legal Obligation:</strong> Compliance with applicable laws</li>
+        </ul>
+
+        <h2>8. CCPA Compliance (California Users)</h2>
+        <p>If you are a California resident, the California Consumer Privacy Act (CCPA) provides you with additional rights:</p>
+        <ul>
+            <li>Right to know what personal information is collected, used, shared, or sold</li>
+            <li>Right to delete personal information held by us</li>
+            <li>Right to opt-out of the sale of personal information</li>
+            <li>Right to non-discrimination for exercising your CCPA rights</li>
+        </ul>
+        <p>We do <strong>not</strong> sell personal information as defined by the CCPA.</p>
+
+        <h2>9. Children's Privacy (COPPA)</h2>
+        <p>Our Service is not directed to individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal data from a child under 13 without parental consent, we will take steps to delete that information promptly.</p>
+
+        <h2>10. Third-Party Links</h2>
+        <p>Our website may contain links to third-party websites, services, or advertisements. We are not responsible for the privacy practices, content, or security of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+
+        <h2>11. Data Retention</h2>
+        <p>We retain automatically collected data (logs, analytics) for a reasonable period necessary to fulfill the purposes outlined in this policy. Cookie data is retained according to the expiration periods set by the respective cookie providers. You can clear cookies at any time through your browser settings.</p>
+
+        <h2>12. International Data Transfers</h2>
+        <p>Your information may be transferred to and maintained on servers located outside your country of residence. By using our Service, you consent to such transfers. We ensure appropriate safeguards are in place for international data transfers in compliance with applicable data protection laws.</p>
+
+        <h2>13. Changes to This Policy</h2>
+        <p>We reserve the right to update this Privacy Policy at any time. Changes will be posted on this page with an updated "Last Updated" date. We encourage you to review this page periodically. Your continued use of the Service after any modifications constitutes acceptance of the updated policy.</p>
+
+        <h2>14. Do Not Track Signals</h2>
+        <p>Some browsers offer a "Do Not Track" (DNT) feature. Our website does not currently respond to DNT signals. However, you can manage your tracking preferences through browser settings and opt-out tools provided by advertising networks.</p>
+
+    </div>
+</div>
+
+<footer>
+    <div class="fc">
+        <div class="fg">
+            <div class="fcl"><h4>🌙 Sleep Calculator Online</h4><p>Free science-backed sleep cycle calculator helping millions find the best time to sleep and wake up.</p></div>
+            <div class="fcl"><h4>Tools</h4><ul><li><a href="/">Sleep Calculator</a></li><li><a href="/#naps">Nap Calculator</a></li><li><a href="/#score">Sleep Score</a></li><li><a href="/#chart">Sleep Chart</a></li></ul></div>
+            <div class="fcl"><h4>Learn</h4><ul><li><a href="/#stages">Sleep Stages</a></li><li><a href="/#tips">Sleep Tips</a></li><li><a href="/#faq">FAQ</a></li><li><a href="/#chart">Sleep by Age</a></li></ul></div>
+            <div class="fcl"><h4>Legal</h4><ul><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/terms">Terms of Use</a></li><li><a href="/disclaimer">Disclaimer</a></li><li><a href="/about">About Us</a></li><li><a href="/contact">Contact Us</a></li></ul></div>
+        </div>
+        <div class="fb"><p>© <script>document.write(new Date().getFullYear())</script> Sleep Calculator Online. All rights reserved.</p></div>
+    </div>
+</footer>
+
+<button class="sctop" id="scTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('sc',scrollY>50);document.getElementById('scTop').classList.toggle('show',scrollY>400)})</script>
+</body>
+</html>
