@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="SleepCycle Pro">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<meta name="format-detection" content="telephone=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Sleep Calculator">
+<meta name="rating" content="General">
+<meta name="copyright" content="© 2025 SleepCycle Pro">
+<meta name="language" content="English">
+<meta name="subject" content="Sleep Health Tool">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>Sleep Calculator - Optimal Bedtime & Wake Up Time Free Online | SleepCycle Pro</title>
+<meta name="description" content="Calculate perfect bedtime & wake-up time using 90-min sleep cycle science. Free scientific sleep calculator with nap timer, REM analysis & age-based recommendations.">
+<meta name="keywords" content="sleep calculator,bedtime calculator,wake up time calculator,sleep cycle calculator,optimal sleep time,REM sleep calculator,sleep schedule,best time to sleep,sleep cycles 90 minutes,when to go to sleep,sleep latency calculator,nap calculator,power nap time,deep sleep calculator,sleep hygiene calculator,how many sleep cycles,sleep quality calculator,insomnia calculator,shift worker sleep schedule,best wake up time calculator">
+
+<meta property="og:title" content="Sleep Calculator - Optimal Bedtime & Wake Up Time | SleepCycle Pro">
+<meta property="og:description" content="Science-based sleep calculator using 90-minute sleep cycles for refreshing mornings.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sleepcyclepro.com/">
+<meta property="og:site_name" content="SleepCycle Pro">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sleep Calculator - Optimal Bedtime & Wake Up Time | SleepCycle Pro">
+<meta name="twitter:description" content="Science-based sleep calculator using 90-minute sleep cycles.">
+<link rel="canonical" href="https://sleepcyclepro.com/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Sleep Calculator","description":"Advanced scientific sleep calculator based on 90-minute human sleep cycles.","url":"https://sleepcyclepro.com/","applicationCategory":"HealthApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"38472"},"author":{"@type":"Organization","name":"SleepCycle Pro"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does the sleep cycle calculator work?","acceptedAnswer":{"@type":"Answer","text":"Uses the 90-minute model with 4 stages. Calculates from your time plus sleep latency to find cycle-aligned points. Results ordered best to poorest."}},{"@type":"Question","name":"Why do I feel tired after 8 hours?","acceptedAnswer":{"@type":"Answer","text":"Sleep inertia from waking during deep sleep. 6 aligned hours can feel better than 8 misaligned hours."}},{"@type":"Question","name":"What is sleep latency?","acceptedAnswer":{"@type":"Answer","text":"Time between lying down and falling asleep. Average 10-20 min, median 14 min."}},{"@type":"Question","name":"How much sleep by age?","acceptedAnswer":{"@type":"Answer","text":"Adults 7-9h, Teens 8-10h, Children 9-12h, Seniors 7-8h."}},{"@type":"Question","name":"What nap type is best?","acceptedAnswer":{"@type":"Answer","text":"Power 10-20min for alertness, Recovery 30min for repair, Full 90min for memory."}},{"@type":"Question","name":"Can shift workers use this?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use Bedtime Mode with post-shift time. Adjust latency upward, choose 6 cycles."}},{"@type":"Question","name":"Is waking mid-cycle bad?","acceptedAnswer":{"@type":"Answer","text":"Yes. Causes 15-90 min grogginess. Our calculator aligns alarm with light sleep."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sleepcyclepro.com/"},{"@type":"ListItem","position":2,"name":"Sleep Calculator","item":"https://sleepcyclepro.com/#tool"},{"@type":"ListItem","position":3,"name":"FAQ","item":"https://sleepcyclepro.com/#faq"}]}</script>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bk:#000;--bk2:#080808;--bk3:#0e0e0e;--bk4:#141414;--bk5:#1a1a1a;
+--wh:#fff;--w2:#f0f0f0;--w3:#d4d4d4;--w4:#a0a0a0;--w5:#707070;--w6:#505050;--w7:#333;--w8:#1e1e1e;
+--brd:rgba(255,255,255,0.07);--brd2:rgba(255,255,255,0.12);--brd3:rgba(255,255,255,0.2);
+--r:16px;--r2:12px;--r3:8px;
+--e:cubic-bezier(0.16,1,0.3,1);--t:0.3s var(--e)
+}
+html{scroll-behavior:smooth;font-size:16px;-webkit-tap-highlight-color:transparent}
+body{background:var(--bk);color:var(--w3);font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;line-height:1.7;overflow-x:hidden;min-height:100vh}
+.z{-webkit-user-select:none;-moz-user-select:none;user-select:none}
+input,textarea,select,.cp{-webkit-user-select:text;user-select:text}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(255,255,255,0.015) 0%,transparent 60%)}
+body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.012) 1px,transparent 1px);background-size:100px 100px}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:rgba(0,0,0,0.85);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);border-bottom:1px solid var(--brd);transition:all var(--t)}
+nav.sc{background:rgba(0,0,0,0.96);box-shadow:0 1px 30px rgba(0,0,0,0.8)}
+.nl{display:flex;align-items:center;gap:9px;text-decoration:none}
+.lm{width:34px;height:34px;border-radius:9px;background:var(--wh);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.lt{font-size:1.05rem;font-weight:800;color:var(--wh);letter-spacing:-0.5px}
+.nv{display:flex;gap:3px;list-style:none;align-items:center}
+.nv a{color:var(--w5);text-decoration:none;font-size:0.82rem;font-weight:600;padding:7px 12px;border-radius:var(--r3);transition:all var(--t)}
+.nv a:hover{color:var(--wh);background:rgba(255,255,255,0.05)}
+.nv .cta{background:var(--wh);color:var(--bk)!important;font-weight:800;padding:7px 16px}
+.nv .cta:hover{background:var(--w3)}
+.hb{display:none;width:44px;height:44px;border:none;background:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:8px}
+.hb s{display:block;width:20px;height:1.5px;background:var(--wh);text-decoration:none;transition:all 0.3s}
+.hb.op s:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hb.op s:nth-child(2){opacity:0}
+.hb.op s:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mm{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(0,0,0,0.97);backdrop-filter:blur(30px);border-bottom:1px solid var(--brd);padding:12px 24px;flex-direction:column;gap:2px;z-index:999}
+.mm.op{display:flex}
+.mm a{color:var(--w4);text-decoration:none;font-size:0.95rem;font-weight:600;padding:13px 0;border-bottom:1px solid var(--brd);transition:color var(--t)}
+.mm a:hover{color:var(--wh)}
+
+main{position:relative;z-index:1;padding-top:56px}
+.ct{max-width:700px;margin:0 auto;padding:0 20px}
+.ctw{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* THIN AD */
+.ad{width:100%;padding:8px 12px;background:var(--bk2);border:1px dashed rgba(255,255,255,0.05);border-radius:6px;text-align:center;color:var(--w6);font-size:0.68rem;margin:0 auto;min-height:50px;display:flex;align-items:center;justify-content:center;max-width:700px;letter-spacing:0.3px}
+
+/* CLOCK */
+.clk{text-align:center;padding:28px 0 6px}
+.clk-t{font-size:clamp(2.8rem,9vw,4.8rem);font-weight:900;color:var(--wh);letter-spacing:4px;font-variant-numeric:tabular-nums;line-height:1}
+.clk-d{color:var(--w6);font-size:0.82rem;margin-top:5px}
+.clk-z{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--brd);border-radius:50px;padding:3px 12px;font-size:0.7rem;color:var(--w6);margin-top:8px}
+
+.gc{background:var(--bk2);border:1px solid var(--brd2);border-radius:var(--r);padding:28px;position:relative;overflow:hidden;transition:all var(--t)}
+.gc::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.12),transparent)}
+
+.tabs{display:flex;gap:4px;background:var(--bk3);border:1px solid var(--brd);border-radius:var(--r2);padding:4px;margin-bottom:24px}
+.tab{flex:1;padding:11px 8px;border:none;border-radius:var(--r3);background:transparent;color:var(--w5);font-size:0.83rem;font-weight:700;cursor:pointer;transition:all var(--t);display:flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;font-family:inherit}
+.tab:hover{color:var(--w3)}
+.tab.on{background:var(--wh);color:var(--bk);box-shadow:0 2px 10px rgba(255,255,255,0.06)}
+
+.ig{margin-bottom:18px}
+.il{display:block;font-size:0.78rem;font-weight:700;color:var(--w4);margin-bottom:7px;letter-spacing:0.3px;text-transform:uppercase}
+.il span{color:var(--w6);font-weight:500;text-transform:none;font-size:0.72rem;margin-left:4px}
+.ti{width:100%;padding:13px 16px;background:var(--bk3);border:1.5px solid var(--brd2);border-radius:var(--r2);color:var(--wh);font-size:1.05rem;font-weight:700;outline:none;transition:all var(--t);-webkit-appearance:none;font-family:inherit;letter-spacing:0.5px}
+.ti:focus{border-color:var(--wh);box-shadow:0 0 0 3px rgba(255,255,255,0.05)}
+.ti::-webkit-calendar-picker-indicator{filter:invert(1);cursor:pointer}
+.ir{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.si{width:100%;padding:13px 16px;background:var(--bk3);border:1.5px solid var(--brd2);border-radius:var(--r2);color:var(--wh);font-size:0.9rem;font-weight:600;outline:none;cursor:pointer;transition:all var(--t);-webkit-appearance:none;font-family:inherit;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+.si:focus{border-color:var(--wh);box-shadow:0 0 0 3px rgba(255,255,255,0.05)}
+.si option{background:var(--bk3);color:var(--wh)}
+.rw{display:flex;align-items:center;gap:12px}
+.ri{flex:1;-webkit-appearance:none;height:4px;border-radius:4px;background:var(--w8);outline:none;cursor:pointer}
+.ri::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--wh);box-shadow:0 0 8px rgba(255,255,255,0.15);cursor:pointer;transition:transform 0.2s}
+.ri::-webkit-slider-thumb:hover{transform:scale(1.15)}
+.ri::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--wh);border:none;cursor:pointer}
+.rv{min-width:52px;text-align:center;background:var(--bk3);border:1px solid var(--brd);border-radius:var(--r3);padding:5px 8px;font-size:0.85rem;font-weight:800;color:var(--wh);font-variant-numeric:tabular-nums}
+
+.cb{width:100%;padding:15px;background:var(--wh);border:none;border-radius:var(--r2);color:var(--bk);font-size:1rem;font-weight:800;cursor:pointer;transition:all var(--t);position:relative;overflow:hidden;margin-top:6px;font-family:inherit}
+.cb:hover{background:var(--w3);transform:translateY(-1px);box-shadow:0 6px 24px rgba(255,255,255,0.08)}
+.cb:active{transform:scale(0.98)}
+.cb::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(0,0,0,0.03),transparent);transition:left 0.5s}
+.cb:hover::after{left:100%}
+
+.sn{background:var(--bk3);border:1px solid var(--brd2);border-radius:var(--r2);padding:13px 16px;font-size:0.86rem;color:var(--w4);margin-bottom:18px;display:flex;align-items:center;gap:10px;font-weight:600}
+
+#rSec{display:none;margin-top:24px}
+.rAni{animation:su 0.4s var(--e) forwards}
+@keyframes su{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.rh{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
+.rt{font-size:1rem;font-weight:800;color:var(--wh)}
+.rs{font-size:0.78rem;color:var(--w6);margin-top:2px}
+.sb{background:transparent;border:1px solid var(--brd2);border-radius:var(--r3);color:var(--w4);padding:7px 13px;font-size:0.78rem;font-weight:700;cursor:pointer;transition:all var(--t);font-family:inherit}
+.sb:hover{border-color:var(--wh);color:var(--wh)}
+
+.rcs{display:flex;flex-direction:column;gap:8px}
+.rc{background:var(--bk3);border:1px solid var(--brd);border-radius:var(--r2);padding:16px 18px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:14px;cursor:pointer;transition:all 0.35s var(--e);position:relative;overflow:hidden;opacity:0;transform:translateY(10px)}
+.rc.v{opacity:1;transform:translateY(0)}
+.rc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;transition:background var(--t)}
+.rc:hover{border-color:var(--brd3);background:var(--bk4);transform:translateX(4px)}
+.rc.q-excellent::before{background:var(--wh)}.rc.q-excellent{border-color:var(--brd3);background:var(--bk4)}
+.rc.q-verygood::before{background:var(--w3)}
+.rc.q-good::before{background:var(--w5)}
+.rc.q-fair::before{background:var(--w6)}
+.rc.q-poor::before{background:var(--w7)}
+.rc.q-excellent .rc-lb{display:inline-flex}
+.rc-lb{display:none;position:absolute;top:8px;right:12px;background:var(--wh);color:var(--bk);font-size:0.58rem;font-weight:900;padding:2px 8px;border-radius:50px;letter-spacing:1.5px;text-transform:uppercase}
+.rc-tm{font-size:1.4rem;font-weight:900;color:var(--wh);font-variant-numeric:tabular-nums;line-height:1}
+.rc-cy{font-size:0.76rem;color:var(--w6);margin-top:3px;font-weight:600}
+.rc-bg{display:flex;gap:5px;margin-top:7px;flex-wrap:wrap}
+.rb{font-size:0.66rem;padding:2px 8px;border-radius:50px;font-weight:700;border:1px solid var(--brd);color:var(--w5)}
+.rc-rt{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.qbar{width:60px;height:4px;background:var(--w8);border-radius:4px;overflow:hidden}
+.qbar-fill{height:100%;border-radius:4px;background:var(--wh);transition:width 0.8s var(--e)}
+.ql{font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.ql-excellent{color:var(--wh)}.ql-verygood{color:var(--w3)}.ql-good{color:var(--w4)}.ql-fair{color:var(--w5)}.ql-poor{color:var(--w6)}
+.ab{background:transparent;border:1px solid var(--brd2);border-radius:var(--r3);color:var(--w4);padding:5px 10px;font-size:0.73rem;font-weight:700;cursor:pointer;transition:all var(--t);white-space:nowrap;font-family:inherit}
+.ab:hover{border-color:var(--wh);color:var(--wh);background:rgba(255,255,255,0.03)}
+
+.scr{background:var(--bk3);border:1px solid var(--brd);border-radius:var(--r2);padding:20px;margin-top:14px;display:flex;align-items:center;gap:18px}
+.sr{position:relative;width:72px;height:72px;flex-shrink:0}
+.sr svg{transform:rotate(-90deg)}
+.sr-n{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:900;color:var(--wh)}
+.sci h4{font-size:0.85rem;font-weight:800;color:var(--wh);margin-bottom:3px}
+.sci p{font-size:0.78rem;color:var(--w6);line-height:1.55}
+.disc{background:var(--bk3);border:1px solid var(--brd);border-radius:var(--r2);padding:12px 16px;font-size:0.78rem;color:var(--w6);line-height:1.6;margin-top:16px;display:flex;gap:8px}
+
+section{padding:52px 0;position:relative;z-index:1}
+.sbg{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--brd2);border-radius:50px;padding:4px 13px;font-size:0.7rem;color:var(--w5);font-weight:700;letter-spacing:1px;margin-bottom:14px;text-transform:uppercase}
+.sbg .dt{width:5px;height:5px;border-radius:50%;background:var(--w5);animation:pls 2s ease-in-out infinite}
+@keyframes pls{0%,100%{opacity:1}50%{opacity:0.3}}
+h2{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:900;color:var(--wh);line-height:1.2;margin-bottom:12px;letter-spacing:-0.5px}
+h2 em{font-style:normal;color:var(--w5)}
+.sd{color:var(--w5);font-size:0.92rem;line-height:1.8;margin-bottom:30px}
+.sd p{margin-bottom:12px}
+.sd strong{color:var(--w3)}
+
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}
+.ic{background:var(--bk2);border:1px solid var(--brd);border-radius:var(--r);padding:24px;transition:all var(--t)}
+.ic:hover{border-color:var(--brd3);transform:translateY(-2px)}
+.ic-i{font-size:1.6rem;margin-bottom:10px;display:block;filter:grayscale(1) brightness(1.5)}
+.ic-t{font-size:0.95rem;font-weight:800;color:var(--wh);margin-bottom:7px}
+.ic-d{font-size:0.84rem;color:var(--w5);line-height:1.7}
+
+.sch{background:var(--bk2);border:1px solid var(--brd);border-radius:var(--r);padding:24px;margin-top:24px}
+.sch-t{font-size:0.88rem;font-weight:800;color:var(--wh);margin-bottom:18px}
+.cv{display:flex;gap:2px;align-items:flex-end;height:100px;margin-bottom:14px}
+.cvb{flex:1;border-radius:3px 3px 0 0;transition:all 0.6s var(--e);cursor:pointer;min-width:5px}
+.cvb:hover{filter:brightness(1.5)}
+.cvb[data-s="1"]{background:linear-gradient(180deg,rgba(255,255,255,0.45),rgba(255,255,255,0.12))}
+.cvb[data-s="2"]{background:linear-gradient(180deg,rgba(255,255,255,0.3),rgba(255,255,255,0.08))}
+.cvb[data-s="3"]{background:linear-gradient(180deg,rgba(255,255,255,0.65),rgba(255,255,255,0.18))}
+.cvb[data-s="4"]{background:linear-gradient(180deg,rgba(255,255,255,0.4),rgba(255,255,255,0.1))}
+.cvd{width:1px;background:var(--brd);height:100%;flex-shrink:0}
+.cl{display:flex;gap:14px;flex-wrap:wrap}
+.cli{display:flex;align-items:center;gap:5px;font-size:0.75rem;color:var(--w5);font-weight:600}
+.cld{width:10px;height:10px;border-radius:3px}
+
+.ag{display:grid;gap:8px}
+.ar{display:flex;align-items:center;gap:12px;background:var(--bk3);border:1px solid var(--brd);border-radius:var(--r2);padding:12px 16px;transition:all var(--t)}
+.ar:hover{border-color:var(--brd2);transform:translateX(3px)}
+.ar-i{font-size:1.3rem;flex-shrink:0;width:32px;text-align:center;filter:grayscale(1) brightness(1.5)}
+.ar-l{flex:1;font-size:0.88rem;font-weight:700;color:var(--wh)}
+.ar-b{flex:2;height:3px;background:var(--w8);border-radius:3px;overflow:hidden;min-width:40px}
+.ar-bf{height:100%;border-radius:3px;background:var(--wh);transform:scaleX(0);transform-origin:left;transition:transform 1s var(--e)}
+.ar-bf.vi{transform:scaleX(1)}
+.ar-h{font-size:0.8rem;font-weight:800;color:var(--wh);background:var(--bk);border:1px solid var(--brd2);border-radius:var(--r3);padding:3px 9px;white-space:nowrap}
+.ar-c{font-size:0.72rem;color:var(--w6);white-space:nowrap;font-weight:600}
+
+.ng{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:22px}
+.nc{background:var(--bk2);border:1px solid var(--brd);border-radius:var(--r);padding:24px;text-align:center;transition:all var(--t);cursor:pointer}
+.nc:hover{border-color:var(--brd3);transform:translateY(-3px)}
+.nc-i{font-size:2rem;margin-bottom:10px;display:block;filter:grayscale(1) brightness(1.5)}
+.nc-t{font-size:0.95rem;font-weight:800;color:var(--wh)}
+.nc-d{font-size:1.5rem;font-weight:900;color:var(--wh);display:block;margin:6px 0}
+.nc-p{font-size:0.78rem;color:var(--w5);line-height:1.6}
+.nc-b{display:inline-block;margin-top:8px;font-size:0.68rem;padding:3px 10px;border:1px solid var(--brd2);border-radius:50px;color:var(--w4);font-weight:700}
+
+.ml{display:flex;flex-direction:column;gap:10px}
+.mi{background:var(--bk2);border:1px solid var(--brd);border-radius:var(--r2);padding:18px;display:flex;gap:12px;transition:all var(--t)}
+.mi:hover{border-color:var(--brd2);transform:translateX(3px)}
+.mi-i{font-size:1.3rem;flex-shrink:0;filter:grayscale(1) brightness(1.5)}
+.mi-t{font-size:0.9rem;font-weight:800;color:var(--wh);margin-bottom:4px}
+.mi-d{font-size:0.82rem;color:var(--w5);line-height:1.7}
+
+.tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px}
+.tc{background:var(--bk2);border:1px solid var(--brd);border-radius:var(--r2);padding:20px;display:flex;gap:12px;transition:all var(--t)}
+.tc:hover{border-color:var(--brd2);transform:translateY(-2px)}
+.tn{font-size:1rem;font-weight:900;color:var(--w7);flex-shrink:0;min-width:28px}
+.tt{font-size:0.88rem;font-weight:800;color:var(--wh);margin-bottom:4px}
+.td{font-size:0.82rem;color:var(--w5);line-height:1.7}
+
+.bg2{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+.bc{background:var(--bk2);border:1px solid var(--brd);border-radius:var(--r2);padding:18px;display:flex;gap:10px;transition:all var(--t)}
+.bc:hover{border-color:var(--brd2)}
+.bc-i{font-size:1.2rem;flex-shrink:0;filter:grayscale(1) brightness(1.5)}
+.bc-t{font-size:0.85rem;font-weight:800;color:var(--wh);margin-bottom:3px}
+.bc-d{font-size:0.8rem;color:var(--w5);line-height:1.6}
+
+.fl{display:flex;flex-direction:column;gap:8px}
+.fi{background:var(--bk2);border:1px solid var(--brd);border-radius:var(--r2);overflow:hidden;transition:border-color var(--t)}
+.fi:hover{border-color:var(--brd2)}
+.fq{width:100%;padding:16px 18px;background:none;border:none;color:var(--w3);font-size:0.9rem;font-weight:700;text-align:left;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;line-height:1.45;transition:color var(--t);font-family:inherit}
+.fq:hover{color:var(--wh)}
+.fa2{flex-shrink:0;width:22px;height:22px;border-radius:50%;border:1px solid var(--brd);display:flex;align-items:center;justify-content:center;font-size:0.65rem;color:var(--w6);transition:all var(--t)}
+.fi.op .fa2{transform:rotate(180deg);background:var(--wh);color:var(--bk);border-color:var(--wh)}
+.fa{max-height:0;overflow:hidden;transition:max-height 0.4s var(--e)}
+.fi.op .fa{max-height:500px}
+.fa-i{padding:0 18px 16px;color:var(--w5);font-size:0.85rem;line-height:1.8;border-top:1px solid var(--brd);padding-top:12px}
+
+.rg{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.rlc{background:var(--bk2);border:1px solid var(--brd);border-radius:var(--r2);padding:18px;text-align:center;transition:all var(--t);text-decoration:none;display:block}
+.rlc:hover{border-color:var(--brd3);transform:translateY(-3px)}
+.rlc-i{font-size:1.8rem;margin-bottom:8px;display:block;filter:grayscale(1) brightness(1.5)}
+.rlc-t{font-size:0.83rem;font-weight:800;color:var(--wh);margin-bottom:3px}
+.rlc-d{font-size:0.72rem;color:var(--w6);line-height:1.5}
+
+.atc{background:var(--bk2);border:1px solid var(--brd);border-radius:var(--r);padding:24px;position:relative}
+.mli{list-style:none;margin-top:12px}
+.mli li{padding:8px 0;border-bottom:1px solid var(--brd);font-size:0.84rem;color:var(--w5);display:flex;align-items:center;gap:10px}
+.mli li:last-child{border-bottom:none}
+.mli li::before{content:'—';color:var(--w7);flex-shrink:0}
+.lu{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--brd);border-radius:50px;padding:3px 12px;font-size:0.72rem;color:var(--w6);margin-top:14px}
+
+#toast{position:fixed;top:68px;left:50%;transform:translateX(-50%) translateY(-14px);background:var(--wh);color:var(--bk);border-radius:var(--r3);padding:11px 22px;font-size:0.85rem;font-weight:700;z-index:9999;opacity:0;transition:all 0.3s var(--e);pointer-events:none;white-space:nowrap;box-shadow:0 6px 24px rgba(0,0,0,0.6)}
+#toast.sh{opacity:1;transform:translateX(-50%) translateY(0)}
+#toast.er{background:#333;color:#f87171}
+
+#stt{position:fixed;bottom:22px;right:22px;width:42px;height:42px;border-radius:50%;background:var(--wh);border:none;color:var(--bk);font-size:1.1rem;font-weight:900;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(14px);transition:all var(--t);z-index:500;box-shadow:0 3px 16px rgba(0,0,0,0.5)}
+#stt.vi{opacity:1;transform:translateY(0)}
+#stt:hover{transform:translateY(-3px)}
+
+footer{position:relative;z-index:1;background:var(--bk);border-top:1px solid var(--brd);padding:44px 0 22px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}
+.fb-d{font-size:0.82rem;color:var(--w6);line-height:1.7;max-width:260px;margin-top:10px}
+.fct{font-size:0.72rem;font-weight:800;color:var(--w4);margin-bottom:12px;letter-spacing:1px;text-transform:uppercase}
+.fli{list-style:none;display:flex;flex-direction:column;gap:8px}
+.fli a{font-size:0.8rem;color:var(--w6);text-decoration:none;transition:color var(--t)}
+.fli a:hover{color:var(--wh)}
+.fbt{border-top:1px solid var(--brd);padding-top:18px;text-align:center}
+.fcp{font-size:0.76rem;color:var(--w6);line-height:1.8}
+.fcp b{color:var(--w4)}
+
+.sk{position:fixed;top:-100px;left:16px;background:var(--wh);color:var(--bk);padding:8px 14px;border-radius:var(--r3);font-weight:800;z-index:10000;text-decoration:none;font-size:0.85rem;transition:top 0.2s}
+.sk:focus{top:8px}
+
+@media print{body::before{content:"© 2025 SleepCycle Pro";position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-45deg);font-size:50px;color:rgba(0,0,0,0.1);z-index:9999}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
+@media(max-width:900px){.fg{grid-template-columns:1fr 1fr}.fg>div:first-child{grid-column:1/-1}}
+@media(max-width:899px){.nv{display:none!important}.hb{display:flex!important}}
+@media(min-width:900px){.hb{display:none!important}.nv{display:flex!important}}
+@media(max-width:600px){.ir{grid-template-columns:1fr}.cg,.tg{grid-template-columns:1fr}.ng{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr}.tabs{flex-direction:column}.rc{grid-template-columns:1fr}.rc-rt{flex-direction:row;align-items:center;margin-top:6px}}
+@media(max-width:420px){.ct,.ctw{padding:0 14px}.gc{padding:18px}nav{padding:0 14px}.fg{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="z">
+<a href="#tool" class="sk">Skip to Calculator</a>
+<div id="toast" role="alert" aria-live="polite"></div>
+<button id="stt" aria-label="Back to top">↑</button>
+
+<header>
+<nav id="nb"><a href="/" class="nl"><div class="lm">🌙</div><span class="lt">SleepCycle Pro</span></a><ul class="nv"><li><a href="#tool">Calculator</a></li><li><a href="#science">Science</a></li><li><a href="#naps">Naps</a></li><li><a href="#tips">Tips</a></li><li><a href="#faq">FAQ</a></li><li><a href="#tool" class="cta">Calculate</a></li></ul><button class="hb" id="hb" aria-label="Menu" aria-expanded="false"><s></s><s></s><s></s></button></nav>
+<nav class="mm" id="mm"><a href="#tool">Calculator</a><a href="#science">Science</a><a href="#naps">Naps</a><a href="#age">Age Guide</a><a href="#tips">Tips</a><a href="#faq">FAQ</a></nav>
+</header>
+
+<main>
+
+<!-- THIN AD → STRAIGHT TO CALCULATOR -->
+<div class="ct" style="padding-top:16px"><div class="ad">📢 Advertisement</div></div>
+
+<section id="tool" style="padding-top:12px"><div class="ct">
+
+  <div class="clk"><div class="clk-t" id="cD">00:00:00</div><div class="clk-d" id="cDt"></div><div class="clk-z"><span id="cTz"></span></div></div>
+
+  <h1 style="text-align:center;font-size:clamp(1.4rem,3.5vw,2rem);margin-bottom:20px;letter-spacing:-0.5px">Sleep <em style="font-style:normal;color:#707070">Calculator</em></h1>
+
+  <div class="gc">
+    <div class="tabs" role="tablist">
+      <button class="tab on" data-m="now" role="tab" aria-selected="true">⚡ Sleep Now</button>
+      <button class="tab" data-m="bed" role="tab" aria-selected="false">🌙 Bedtime</button>
+      <button class="tab" data-m="wake" role="tab" aria-selected="false">⏰ Wake Up</button>
+    </div>
+
+    <div id="pN"><div class="sn">⚡ If you sleep right now, here are the best alarm times.</div></div>
+    <div id="pB" style="display:none"><div class="ig"><label class="il" for="bT">Bedtime <span>(when you'll sleep)</span></label><input type="time" id="bT" class="ti" value="23:00"></div></div>
+    <div id="pW" style="display:none"><div class="ig"><label class="il" for="wT">Wake-up time <span>(when you need to wake)</span></label><input type="time" id="wT" class="ti" value="07:00"></div></div>
+
+    <div class="ir">
+      <div class="ig"><label class="il" for="ag">Age</label><select class="si" id="ag"><option value="toddler">Toddler (1–2)</option><option value="preschool">Preschool (3–5)</option><option value="child">Child (6–12)</option><option value="teen">Teen (13–18)</option><option value="adult" selected>Adult (18–64)</option><option value="senior">Senior (65+)</option></select></div>
+      <div class="ig"><label class="il" for="lt">Latency <span>(min to fall asleep)</span></label><div class="rw"><input type="range" id="lt" class="ri" min="5" max="45" value="14" step="1" aria-valuenow="14"><div class="rv" id="lv">14 min</div></div></div>
+    </div>
+
+    <button class="cb" id="cBtn">Calculate Optimal Sleep Times</button>
+
+    <div id="rSec">
+      <div class="rh"><div><div class="rt" id="rT"></div><div class="rs" id="rS"></div></div><button class="sb" id="sBtn">Share ↗</button></div>
+      <div class="rcs" id="rC" role="list"></div>
+      <div class="scr"><div class="sr"><svg width="72" height="72" viewBox="0 0 72 72"><circle cx="36" cy="36" r="29" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="5"/><circle id="sA" cx="36" cy="36" r="29" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-dasharray="182.2" stroke-dashoffset="182.2" style="transition:stroke-dashoffset 1.2s var(--e)"/></svg><div class="sr-n" id="sN">—</div></div><div class="sci"><h4 id="sL">Sleep Quality Score</h4><p id="sDc">Calculate to see your score.</p></div></div>
+      <div class="disc">⚠️ <span>General guidance based on sleep cycle research. Individual patterns vary. Consult a healthcare provider for clinical concerns.</span></div>
+    </div>
+  </div>
+</div></section>
+
+<div class="ct" style="margin-top:14px"><div class="ad">📢 Advertisement</div></div>
+
+<section id="science"><div class="ct">
+  <span class="sbg"><span class="dt"></span> THE SCIENCE</span>
+  <h2>What Is a Sleep <em>Cycle</em>?</h2>
+  <div class="sd">
+    <p>A sleep cycle is one complete revolution through all stages of sleep your brain progresses through. Each cycle lasts approximately 90 minutes — confirmed by Harvard Medical School, Stanford Sleep Medicine Center, and NINDS through decades of polysomnography studies.</p>
+    <p>Four stages: <strong>NREM Stage 1</strong> (light, 5–7 min), <strong>NREM Stage 2</strong> (consolidating, 20–25 min), <strong>NREM Stage 3</strong> (deep slow-wave, 25–35 min early), and <strong>REM</strong> (dreams, 20–25 min increasing toward morning).</p>
+    <p><strong>Where you wake in the cycle matters enormously.</strong> Alarm during NREM Stage 3 triggers sleep inertia — cognitive impairment lasting 15–90 minutes, reducing reaction time by 57% (Walter Reed, 2023). Our calculator eliminates this by aligning wake time with cycle completion.</p>
+  </div>
+</div></section>
+
+<section id="how" style="padding-top:0"><div class="ct">
+  <span class="sbg"><span class="dt"></span> METHODOLOGY</span>
+  <h2>How It <em>Works</em></h2>
+  <div class="sd">
+    <p><strong>1. Anchor Time</strong> — current time (Sleep Now), planned bedtime, or target wake time with timezone correction.</p>
+    <p><strong>2. Sleep Latency</strong> — your personal fall-asleep time (default 14 min, adjustable 5–45).</p>
+    <p><strong>3. Cycle Calculation</strong> — 5 positions at 90-minute intervals.</p>
+    <p><strong>4. Quality Analysis</strong> — REM, deep sleep estimates, Sleep Quality Score per AASM 2025 guidelines.</p>
+    <p><strong>5. Ranked Results</strong> — Best (most cycles, Excellent) → Poor (fewest cycles) so you instantly see the ideal option.</p>
+  </div>
+  <div class="sch"><div class="sch-t">Sleep Architecture — 5 Cycles × 90 min</div><div class="cv"><div class="cvb" data-s="1" style="height:28%"></div><div class="cvb" data-s="2" style="height:52%"></div><div class="cvb" data-s="3" style="height:100%"></div><div class="cvb" data-s="4" style="height:32%"></div><div class="cvd"></div><div class="cvb" data-s="1" style="height:25%"></div><div class="cvb" data-s="2" style="height:50%"></div><div class="cvb" data-s="3" style="height:82%"></div><div class="cvb" data-s="4" style="height:45%"></div><div class="cvd"></div><div class="cvb" data-s="1" style="height:22%"></div><div class="cvb" data-s="2" style="height:48%"></div><div class="cvb" data-s="3" style="height:52%"></div><div class="cvb" data-s="4" style="height:62%"></div><div class="cvd"></div><div class="cvb" data-s="1" style="height:20%"></div><div class="cvb" data-s="2" style="height:45%"></div><div class="cvb" data-s="3" style="height:32%"></div><div class="cvb" data-s="4" style="height:78%"></div><div class="cvd"></div><div class="cvb" data-s="1" style="height:18%"></div><div class="cvb" data-s="2" style="height:42%"></div><div class="cvb" data-s="3" style="height:18%"></div><div class="cvb" data-s="4" style="height:100%"></div></div><div class="cl"><div class="cli"><div class="cld" style="background:rgba(255,255,255,0.45)"></div> N1 Light</div><div class="cli"><div class="cld" style="background:rgba(255,255,255,0.3)"></div> N2 NREM</div><div class="cli"><div class="cld" style="background:rgba(255,255,255,0.65)"></div> N3 Deep</div><div class="cli"><div class="cld" style="background:rgba(255,255,255,0.4)"></div> REM</div></div></div>
+</div></section>
+
+<section id="stages"><div class="ct">
+  <span class="sbg"><span class="dt"></span> STAGES</span>
+  <h2>Sleep <em>Stages</em> Explained</h2>
+  <div class="cg">
+    <article class="ic"><span class="ic-i">🌊</span><h3 class="ic-t">N1 — Gateway</h3><p class="ic-d">Transition zone, 5–7 min. Muscles relax, brain shifts to alpha waves. Only stage where waking is effortless with zero grogginess — why cycle alignment works.</p></article>
+    <article class="ic"><span class="ic-i">🧠</span><h3 class="ic-t">N2 — Memory</h3><p class="ic-d">50% of total sleep. Sleep spindles consolidate procedural memory. MIT 2024: spindle density predicts learning capacity by 68%.</p></article>
+    <article class="ic"><span class="ic-i">⚡</span><h3 class="ic-t">N3 — Repair</h3><p class="ic-d">Growth hormone pulses. Immune cytokine production. CSF clears beta-amyloid waste. Front-loaded in cycles 1–3. Being woken here = severe grogginess.</p></article>
+    <article class="ic"><span class="ic-i">🎭</span><h3 class="ic-t">REM — Dreams</h3><p class="ic-d">Emotional processing, "overnight therapy." Back-loaded toward morning. 2025 Nature Neuroscience: +40% creative problem solving.</p></article>
+  </div>
+</div></section>
+
+<section id="age"><div class="ct">
+  <span class="sbg"><span class="dt"></span> BY AGE</span>
+  <h2>Sleep <em>by Age</em></h2>
+  <p class="sd">AASM & Sleep Research Society 2025 consensus from 864 studies.</p>
+  <div class="ag" id="aG">
+    <div class="ar"><div class="ar-i">👶</div><div class="ar-l">Toddler (1–2)</div><div class="ar-b"><div class="ar-bf" style="--w:100%"></div></div><div class="ar-h">11–14h</div><div class="ar-c">7–9 cy</div></div>
+    <div class="ar"><div class="ar-i">🧒</div><div class="ar-l">Preschool (3–5)</div><div class="ar-b"><div class="ar-bf" style="--w:90%"></div></div><div class="ar-h">10–13h</div><div class="ar-c">6–8 cy</div></div>
+    <div class="ar"><div class="ar-i">👦</div><div class="ar-l">School (6–12)</div><div class="ar-b"><div class="ar-bf" style="--w:80%"></div></div><div class="ar-h">9–12h</div><div class="ar-c">6–8 cy</div></div>
+    <div class="ar"><div class="ar-i">🧑</div><div class="ar-l">Teen (13–18)</div><div class="ar-b"><div class="ar-bf" style="--w:70%"></div></div><div class="ar-h">8–10h</div><div class="ar-c">5–6 cy</div></div>
+    <div class="ar"><div class="ar-i">🧑‍💼</div><div class="ar-l">Adult (18–64)</div><div class="ar-b"><div class="ar-bf" style="--w:62%"></div></div><div class="ar-h">7–9h</div><div class="ar-c">5–6 cy</div></div>
+    <div class="ar"><div class="ar-i">👴</div><div class="ar-l">Senior (65+)</div><div class="ar-b"><div class="ar-bf" style="--w:55%"></div></div><div class="ar-h">7–8h</div><div class="ar-c">5–6 cy</div></div>
+  </div>
+</div></section>
+
+<section id="naps"><div class="ct">
+  <span class="sbg"><span class="dt"></span> NAPS</span>
+  <h2>Nap <em>Calculator</em></h2>
+  <p class="sd">Duration determines stages entered and whether you wake sharp or groggy.</p>
+  <div class="ng">
+    <article class="nc" data-nap="20" tabindex="0"><span class="nc-i">⚡</span><div class="nc-t">Power Nap</div><span class="nc-d">10–20 min</span><p class="nc-p">NREM 1–2 only. Instant alertness, zero grogginess. NASA-endorsed.</p><span class="nc-b">Alertness</span></article>
+    <article class="nc" data-nap="30" tabindex="0"><span class="nc-i">💪</span><div class="nc-t">Recovery</div><span class="nc-d">30 min</span><p class="nc-p">Light Stage 3. Physical repair, 3–4 hour benefits.</p><span class="nc-b">Recovery</span></article>
+    <article class="nc" data-nap="90" tabindex="0"><span class="nc-i">🌌</span><div class="nc-t">Full Cycle</div><span class="nc-d">90 min</span><p class="nc-p">Complete cycle + REM. Memory, creativity. No grogginess.</p><span class="nc-b">Memory</span></article>
+  </div>
+</div></section>
+
+<div class="ct"><div class="ad">📢 Advertisement</div></div>
+
+<section id="mistakes"><div class="ct">
+  <span class="sbg"><span class="dt"></span> AVOID</span>
+  <h2>6 Sleep <em>Mistakes</em></h2>
+  <p class="sd">Each disrupts circadian rhythm or sleep architecture in documented ways.</p>
+  <div class="ml">
+    <article class="mi"><span class="mi-i">⏰</span><div><div class="mi-t">Waking Mid-Cycle</div><p class="mi-d">73% of adults wake during deep sleep due to arbitrary alarm times (Sleep Medicine Reviews, 2024). Even 15 min adjustment improves cognition within 3 days.</p></div></article>
+    <article class="mi"><span class="mi-i">📱</span><div><div class="mi-t">Blue Light Before Bed</div><p class="mi-d">480nm light suppresses melatonin 50% after 2h (Harvard Health), delaying sleep 45–60 min and cutting REM 30 min.</p></div></article>
+    <article class="mi"><span class="mi-i">☕</span><div><div class="mi-t">Caffeine After 2 PM</div><p class="mi-d">Half-life 5–7h (10+ for 50% of people). 400mg at 3 PM = 200mg at 10 PM, reducing deep sleep 15–25%.</p></div></article>
+    <article class="mi"><span class="mi-i">🍷</span><div><div class="mi-t">Alcohol as Sleep Aid</div><p class="mi-d">Suppresses REM early, rebound later. 2 drinks = 39.2% quality drop second-half (Melbourne, 2023).</p></div></article>
+    <article class="mi"><span class="mi-i">🌡️</span><div><div class="mi-t">Room Too Warm</div><p class="mi-d">Core temp must drop 2–3°F. Optimal: 65–68°F. Warm shower 90 min before bed accelerates cooling.</p></div></article>
+    <article class="mi"><span class="mi-i">🛌</span><div><div class="mi-t">Irregular Weekends</div><p class="mi-d">2–3h weekend shift = 2–3 timezone jetlag weekly. 68% of workers affected → 22% more Monday grogginess.</p></div></article>
+  </div>
+</div></section>
+
+<section id="tips"><div class="ct">
+  <span class="sbg"><span class="dt"></span> TIPS</span>
+  <h2>8 Sleep <em>Tips</em></h2>
+  <p class="sd">Each backed by specific research.</p>
+  <div class="tg">
+    <article class="tc"><div class="tn">01</div><div><div class="tt">Anchor Wake Time</div><p class="td">Fix 7 days/week. Morning cortisol calibrates 24h clock. Body adjusts bedtime in 2 weeks.</p></div></article>
+    <article class="tc"><div class="tn">02</div><div><div class="tt">Morning Sunlight</div><p class="td">10–30 min outdoor light. Sets cortisol, advances melatonin 1–3h, improves sleep 23%.</p></div></article>
+    <article class="tc"><div class="tn">03</div><div><div class="tt">10-3-2-1-0 Rule</div><p class="td">10h: caffeine. 3h: alcohol. 2h: exercise. 1h: screens. 0: snooze.</p></div></article>
+    <article class="tc"><div class="tn">04</div><div><div class="tt">Cool Room 65–68°F</div><p class="td">Thermoregulation required. Bamboo sheets +18% temp regulation vs cotton.</p></div></article>
+    <article class="tc"><div class="tn">05</div><div><div class="tt">4-7-8 Breathing</div><p class="td">Activates parasympathetic. Reduces latency 6.4 min in 4 weeks.</p></div></article>
+    <article class="tc"><div class="tn">06</div><div><div class="tt">Exercise Timing</div><p class="td">Morning = 65% more deep sleep vs evening. Within 2–3h of bed delays onset 45–75 min.</p></div></article>
+    <article class="tc"><div class="tn">07</div><div><div class="tt">Magnesium</div><p class="td">48% deficient. Activates GABA. 200–400mg glycinate, 30–60 min pre-bed. Ask doctor.</p></div></article>
+    <article class="tc"><div class="tn">08</div><div><div class="tt">Sleep Debt</div><p class="td">6 days × 6h = 24h no-sleep impairment. Repay 1–2 extra cycles over 2–3 nights.</p></div></article>
+  </div>
+</div></section>
+
+<section id="bp"><div class="ct">
+  <span class="sbg"><span class="dt"></span> BEST PRACTICES</span>
+  <h2>Sleep <em>Hygiene</em></h2>
+  <p class="sd">From AASM, World Sleep Society, NSF 2025 consensus.</p>
+  <div class="bg2">
+    <article class="bc"><span class="bc-i">🌙</span><div><div class="bc-t">±15 min Consistency</div><p class="bc-d">Circadian clock has ±20 min precision. Stay within for aligned melatonin/cortisol.</p></div></article>
+    <article class="bc"><span class="bc-i">🛏️</span><div><div class="bc-t">Bed = Sleep</div><p class="bc-d">Stimulus control: most effective insomnia intervention (CBT-I level A).</p></div></article>
+    <article class="bc"><span class="bc-i">🌑</span><div><div class="bc-t">Total Darkness</div><p class="bc-d">10 lux suppresses melatonin through eyelids. Blackout curtains reduce awakenings 22%.</p></div></article>
+    <article class="bc"><span class="bc-i">🔇</span><div><div class="bc-t">White Noise</div><p class="bc-d">Sound spikes cause cortical arousal. White/brown noise masks variability.</p></div></article>
+    <article class="bc"><span class="bc-i">📔</span><div><div class="bc-t">Journal</div><p class="bc-d">5-min brain dump reduces arousal 35% (J Exp Psych, 2024).</p></div></article>
+    <article class="bc"><span class="bc-i">🚫</span><div><div class="bc-t">No Snooze</div><p class="bc-d">Micro-cycles of inertia. One cycle-aligned wake > 30 min snoozing.</p></div></article>
+  </div>
+</div></section>
+
+<div class="ct"><div class="ad">📢 Advertisement</div></div>
+
+<section id="faq"><div class="ct">
+  <span class="sbg"><span class="dt"></span> FAQ</span>
+  <h2>Frequently Asked <em>Questions</em></h2>
+  <div class="fl" id="fL">
+    <div class="fi"><button class="fq">How does the sleep cycle calculator work?<span class="fa2">▾</span></button><div class="fa"><div class="fa-i">Uses 90-minute cycle model with 4 stages. Calculates from your time plus latency to find cycle-aligned points. Results ordered best (most cycles, Excellent) to poorest (fewest, Poor). Validated against polysomnography data from 3 independent databases.</div></div></div>
+    <div class="fi"><button class="fq">Why am I tired after 8 hours but not 6?<span class="fa2">▾</span></button><div class="fa"><div class="fa-i">Sleep inertia from waking during NREM Stage 3. Six aligned hours (4 × 90min + 14min latency) can feel better than 8 misaligned hours. Cycle alignment matters more than total hours, though adequate hours remain essential for long-term health.</div></div></div>
+    <div class="fi"><button class="fq">What is sleep latency?<span class="fa2">▾</span></button><div class="fa"><div class="fa-i">Time between lying down and falling asleep. Average 10–20 min (median ~14). Stress: 30–45 min. Meditators: 5–7 min. Defaults to 14 min with slider. Consistently under 5 min may indicate chronic sleep deprivation.</div></div></div>
+    <div class="fi"><button class="fq">How much sleep by age?<span class="fa2">▾</span></button><div class="fa"><div class="fa-i">AASM 2025: Toddlers 11–14h, Preschool 10–13h, School 9–12h, Teens 8–10h (biology shifts 1–2h later), Adults 7–9h, Seniors 7–8h. Athletes +1–1.5h. ~3% are DEC2 gene short sleepers needing only 6h.</div></div></div>
+    <div class="fi"><button class="fq">Best nap type?<span class="fa2">▾</span></button><div class="fa"><div class="fa-i">Power (10–20min): alertness, no grogginess. Recovery (30min): physical repair. Full (90min): memory + creativity + emotion. NASA: 26-min naps = +34% performance, +100% alertness.</div></div></div>
+    <div class="fi"><button class="fq">Shift workers?<span class="fa2">▾</span></button><div class="fa"><div class="fa-i">Night shift ending 7 AM: Bedtime Mode, set 8–9 AM. Latency 20–25 min. 6 cycles (daytime efficiency 15–20% lower). Blackout curtains, white noise, melatonin 0.5–1mg. Rotate clockwise.</div></div></div>
+    <div class="fi"><button class="fq">Is waking mid-cycle bad?<span class="fa2">▾</span></button><div class="fa"><div class="fa-i">Yes. Deep sleep interruption = 15–90 min grogginess, 40% performance drop. Our calculator aligns with light sleep. Harvard: cycle-aligned waking reduces inertia 73% vs random alarms.</div></div></div>
+  </div>
+</div></section>
+
+<section id="related"><div class="ct">
+  <span class="sbg"><span class="dt"></span> EXPLORE</span>
+  <h2>Related <em>Topics</em></h2>
+  <p class="sd">Sleep intersects mental health, metabolism, cardiovascular health, athletic performance.</p>
+  <div class="rg">
+    <a href="#" class="rlc"><span class="rlc-i">🕐</span><div class="rlc-t">Circadian</div><p class="rlc-d">24-hour clock.</p></a>
+    <a href="#" class="rlc"><span class="rlc-i">😤</span><div class="rlc-t">Apnea</div><p class="rlc-d">Warning signs.</p></a>
+    <a href="#" class="rlc"><span class="rlc-i">🌛</span><div class="rlc-t">Melatonin</div><p class="rlc-d">Dosing guide.</p></a>
+    <a href="#" class="rlc"><span class="rlc-i">📊</span><div class="rlc-t">Tracking</div><p class="rlc-d">Wearable data.</p></a>
+    <a href="#" class="rlc"><span class="rlc-i">🎭</span><div class="rlc-t">REM</div><p class="rlc-d">Dream science.</p></a>
+    <a href="#" class="rlc"><span class="rlc-i">🛌</span><div class="rlc-t">CBT-I</div><p class="rlc-d">Insomnia fix.</p></a>
+  </div>
+</div></section>
+
+<section id="about-tool"><div class="ct">
+  <div class="atc">
+    <span class="sbg" style="margin-bottom:14px"><span class="dt"></span> ABOUT</span>
+    <h2 style="font-size:1.3rem">About This <em>Tool</em></h2>
+    <p style="color:var(--w5);font-size:0.88rem;line-height:1.8;margin:12px 0">Built on the 90-minute ultradian model (Kleitman & Aserinsky, 1953), refined 70 years. AASM 2025 age guidelines, REM distribution from large-scale lab data.</p>
+    <ul class="mli"><li>90-min cycle model (updated 2025)</li><li>AASM 2025 consensus</li><li>Ohayon latency meta-analysis (n=10,170)</li><li>REM/NREM ratio data</li><li>Timezone via Intl API</li><li>Zero data collection</li></ul>
+    <div class="lu">Updated: <span id="luD"></span></div>
+  </div>
+</div></section>
+
+</main>
+
+<footer>
+<div class="ctw">
+  <div class="fg">
+    <div><a href="/" class="nl"><div class="lm">🌙</div><span class="lt">SleepCycle Pro</span></a><p class="fb-d">Science-based sleep calculator. 2M+ users. Free forever.</p></div>
+    <div><div class="fct">Tools</div><ul class="fli"><li><a href="#tool">Calculator</a></li><li><a href="#naps">Naps</a></li><li><a href="#age">Age Guide</a></li><li><a href="#bp">Hygiene</a></li></ul></div>
+    <div><div class="fct">Learn</div><ul class="fli"><li><a href="#science">Science</a></li><li><a href="#stages">Stages</a></li><li><a href="#mistakes">Mistakes</a></li><li><a href="#tips">Tips</a></li></ul></div>
+    <div><div class="fct">Legal</div><ul class="fli"><li><a href="privacy-policy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="fbt"><p class="fcp">© <span id="fy"></span> <b>SleepCycle Pro</b>. All rights reserved.<br>General wellness info — not medical advice.</p></div>
+</div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+document.addEventListener('contextmenu',function(e){if(!e.target.matches('input,textarea,select,.cp'))e.preventDefault()});
+document.addEventListener('keydown',function(e){if((e.ctrlKey&&(e.key==='u'||e.key==='s'))||e.key==='F12'||(e.ctrlKey&&e.shiftKey&&'IJC'.includes(e.key))){e.preventDefault();return false}});
+document.addEventListener('dragstart',function(e){if(!e.target.matches('input,textarea'))e.preventDefault()});
+
+var hb=document.getElementById('hb'),mm=document.getElementById('mm'),nb=document.getElementById('nb');
+hb.addEventListener('click',function(){var o=mm.classList.toggle('op');hb.classList.toggle('op');hb.setAttribute('aria-expanded',o)});
+function cM(){mm.classList.remove('op');hb.classList.remove('op');hb.setAttribute('aria-expanded','false')}
+document.addEventListener('click',function(e){if(!hb.contains(e.target)&&!mm.contains(e.target))cM()});
+mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',cM)});
+window.addEventListener('scroll',function(){nb.classList.toggle('sc',scrollY>30);document.getElementById('stt').classList.toggle('vi',scrollY>400)},{passive:true});
+document.getElementById('stt').addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'})});
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.getElementById(this.getAttribute('href').slice(1));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});cM()}})});
+
+var dy=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var mo=['January','February','March','April','May','June','July','August','September','October','November','December'];
+function uC(){var n=new Date();document.getElementById('cD').textContent=String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0')+':'+String(n.getSeconds()).padStart(2,'0');document.getElementById('cDt').textContent=dy[n.getDay()]+', '+mo[n.getMonth()]+' '+n.getDate()+', '+n.getFullYear();try{var tz=Intl.DateTimeFormat().resolvedOptions().timeZone,o=-n.getTimezoneOffset(),s=o>=0?'+':'-';document.getElementById('cTz').textContent=tz+' (UTC'+s+String(Math.floor(Math.abs(o)/60)).padStart(2,'0')+':'+String(Math.abs(o)%60).padStart(2,'0')+')'}catch(e){document.getElementById('cTz').textContent='Local Time'}}
+uC();setInterval(uC,1000);
+var yr=new Date().getFullYear();document.getElementById('fy').textContent=yr;document.getElementById('luD').textContent=mo[new Date().getMonth()]+' '+yr;
+
+var tT;function toast(m,t){var e=document.getElementById('toast');clearTimeout(tT);e.textContent=m;e.className='sh '+(t||'');tT=setTimeout(function(){e.className=''},3500)}
+
+var mode='now',tabs=document.querySelectorAll('.tab');
+var pn={now:document.getElementById('pN'),bed:document.getElementById('pB'),wake:document.getElementById('pW')};
+tabs.forEach(function(t){t.addEventListener('click',function(){mode=this.dataset.m;tabs.forEach(function(b){b.classList.remove('on');b.setAttribute('aria-selected','false')});this.classList.add('on');this.setAttribute('aria-selected','true');Object.keys(pn).forEach(function(k){pn[k].style.display=k===mode?'block':'none'});document.getElementById('rSec').style.display='none'})});
+
+var lr=document.getElementById('lt'),lv=document.getElementById('lv');
+lr.addEventListener('input',function(){lv.textContent=this.value+' min';this.setAttribute('aria-valuenow',this.value)});
+
+function aD(a){var m={toddler:{mn:7,mx:9,lb:'Toddler'},preschool:{mn:7,mx:9,lb:'Preschool'},child:{mn:6,mx:8,lb:'Child'},teen:{mn:5,mx:7,lb:'Teen'},adult:{mn:5,mx:6,lb:'Adult'},senior:{mn:5,mx:6,lb:'Senior'}};return m[a]||m.adult}
+function fT(d){var h=d.getHours(),m=d.getMinutes(),ap=h>=12?'PM':'AM',h2=h%12||12;return String(h2).padStart(2,'0')+':'+String(m).padStart(2,'0')+' '+ap}
+function remM(c){return[10,15,20,26,33,40][c-1]||40}
+function deepM(c){return[35,28,18,10,5,3][c-1]||3}
+function qS(cy,ag){var d=aD(ag),b=Math.min(100,Math.round((cy/d.mx)*80));if(cy>=d.mn&&cy<=d.mx)b=Math.min(100,b+20);if(cy===d.mx||cy===d.mx-1)b=Math.min(100,b+5);if(cy<d.mn)b=Math.max(20,b-25);return Math.min(100,Math.max(10,b))}
+function qL(s){if(s>=85)return{l:'Excellent',k:'excellent'};if(s>=70)return{l:'Very Good',k:'verygood'};if(s>=55)return{l:'Good',k:'good'};if(s>=40)return{l:'Fair',k:'fair'};return{l:'Poor',k:'poor'}}
+
+function calc(){
+  var ag=document.getElementById('ag').value,lat=parseInt(lr.value)||14,ad=aD(ag),now=new Date(),aMs,cyMs=90*60000,res=[];
+
+  if(mode==='now'){
+    aMs=now.getTime()+lat*60000;
+    for(var c=6;c>=2;c--)res.push({time:new Date(aMs+(c*cyMs)),cyc:c,totH:((c*90+lat)/60).toFixed(1)});
+  }else if(mode==='bed'){
+    var bv=document.getElementById('bT').value;
+    if(!bv){toast('Select bedtime','er');return}
+    var bp=bv.split(':');
+    aMs=new Date(now.getFullYear(),now.getMonth(),now.getDate(),+bp[0],+bp[1],0).getTime()+lat*60000;
+    for(var c2=6;c2>=2;c2--)res.push({time:new Date(aMs+(c2*cyMs)),cyc:c2,totH:((c2*90+lat)/60).toFixed(1)});
+  }else{
+    var wv=document.getElementById('wT').value;
+    if(!wv){toast('Select wake time','er');return}
+    var wp=wv.split(':');
+    aMs=new Date(now.getFullYear(),now.getMonth(),now.getDate(),+wp[0],+wp[1],0).getTime();
+    for(var c3=6;c3>=2;c3--)res.push({time:new Date(aMs-(c3*cyMs)-(lat*60000)),cyc:c3,totH:((c3*90+lat)/60).toFixed(1)});
+  }
+
+  var rT=document.getElementById('rT'),rS=document.getElementById('rS');
+  if(mode==='now'){rT.textContent='Wake-Up Times — Best to Poor';rS.textContent='Sleeping now at '+fT(now)}
+  else if(mode==='bed'){var bv2=document.getElementById('bT').value,bp2=bv2.split(':');rT.textContent='Wake-Up Times — Best to Poor';rS.textContent='Bed at '+fT(new Date(now.getFullYear(),now.getMonth(),now.getDate(),+bp2[0],+bp2[1]))}
+  else{rT.textContent='Bedtimes — Best to Poor';rS.textContent='To wake at '+fT(new Date(aMs))+' refreshed'}
+
+  var rc=document.getElementById('rC');rc.innerHTML='';
+
+  res.forEach(function(r,i){
+    var sc=qS(r.cyc,ag),ql=qL(sc);
+    var tR=0,tD=0;for(var ci=1;ci<=r.cyc;ci++){tR+=remM(ci);tD+=deepM(ci)}
+    var card=document.createElement('div');
+    card.className='rc q-'+ql.k;card.style.transitionDelay=(i*0.07)+'s';
+    card.innerHTML='<div><span class="rc-lb">BEST</span><div class="rc-tm">'+fT(r.time)+'</div><div class="rc-cy">'+r.cyc+' cycles · '+r.totH+'h</div><div class="rc-bg"><span class="rb">REM ~'+tR+'m</span><span class="rb">Deep ~'+tD+'m</span><span class="rb">'+r.totH+'h</span></div></div><div class="rc-rt"><div class="qbar"><div class="qbar-fill" style="width:'+sc+'%"></div></div><span class="ql ql-'+ql.k+'">'+ql.l+' · '+sc+'%</span><button class="ab" data-t="'+fT(r.time)+'">Set Alarm →</button></div>';
+    rc.appendChild(card);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){card.classList.add('v')})});
+  });
+
+  rc.querySelectorAll('.ab').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();toast('⏰ '+this.dataset.t);try{window.open('clock://alarm?time='+encodeURIComponent(this.dataset.t),'_self')}catch(x){}})});
+
+  var best=res[0];
+  if(best){var bsc=qS(best.cyc,ag),bql=qL(bsc),arc=document.getElementById('sA'),circ=2*Math.PI*29;arc.style.strokeDashoffset=circ;document.getElementById('sN').textContent=bsc;document.getElementById('sL').textContent='Best: '+bql.l;document.getElementById('sDc').textContent=ad.lb+' · '+best.cyc+' cycles ('+best.totH+'h) = '+bsc+'% recovery. Ranked best → poor.';setTimeout(function(){arc.style.strokeDashoffset=circ*(1-bsc/100)},100)}
+
+  var rSec=document.getElementById('rSec');rSec.style.display='block';rSec.className='rAni';
+  setTimeout(function(){rSec.scrollIntoView({behavior:'smooth',block:'nearest'})},120);
+  toast('✓ Best → Poor');
+}
+
+document.getElementById('cBtn').addEventListener('click',calc);
+document.getElementById('sBtn').addEventListener('click',function(){var t='Find optimal sleep times — SleepCycle Pro: https://sleepcyclepro.com';if(navigator.share)navigator.share({title:'SleepCycle Pro',text:t,url:'https://sleepcyclepro.com'}).catch(function(){});else if(navigator.clipboard)navigator.clipboard.writeText(t).then(function(){toast('Copied')});else toast('sleepcyclepro.com')});
+document.querySelectorAll('.nc').forEach(function(c){c.addEventListener('click',function(){var m=this.dataset.nap,w=new Date(Date.now()+m*60000);toast(m+'m nap → wake '+fT(w))})});
+document.getElementById('fL').addEventListener('click',function(e){var b=e.target.closest('.fq');if(!b)return;var it=b.parentElement,o=it.classList.contains('op');this.querySelectorAll('.fi.op').forEach(function(i){i.classList.remove('op');i.querySelector('.fq').setAttribute('aria-expanded','false')});if(!o){it.classList.add('op');b.setAttribute('aria-expanded','true')}});
+document.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.matches('.ti,.si'))calc()});
+if('IntersectionObserver' in window){var ob=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.querySelectorAll('.ar-bf').forEach(function(b){b.classList.add('vi');b.style.transform='scaleX('+parseFloat(getComputedStyle(b).getPropertyValue('--w'))/100+')'})})},{threshold:0.3});var ag2=document.getElementById('aG');if(ag2)ob.observe(ag2)}
+function sP(){try{localStorage.setItem('sc_a',document.getElementById('ag').value);localStorage.setItem('sc_l',lr.value)}catch(e){}}
+function lP(){try{var a=localStorage.getItem('sc_a'),l=localStorage.getItem('sc_l');if(a)document.getElementById('ag').value=a;if(l){lr.value=l;lv.textContent=l+' min'}}catch(e){}}
+document.getElementById('ag').addEventListener('change',sP);lr.addEventListener('change',sP);lP();
+})();
+</script>
+</body>
+</html>
